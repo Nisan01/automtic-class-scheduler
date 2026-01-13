@@ -11,10 +11,10 @@ A web-based system to automatically generate class schedules for educational ins
 ## Tech Stack
 - Next.js
 - React
-- Node.js
-- MongoDB
+- Drizzle ORM
+- PostgreSQL
 
-## Installation
+## RUN
 
-```bash
-npm install
+
+npm run dev
