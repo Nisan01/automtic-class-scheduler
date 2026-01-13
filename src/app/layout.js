@@ -1,5 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Inter, Raleway,Carlito } from "next/font/google";
+
 import "./globals.css";
+import BackGround from "@/components/Background/BackGround";
+import  UserProvider  from "../context/userProvider"
+import { Toaster } from "@/components/ui/sonner"
+
+const inter=Inter({
+  variable:"--font-inter",
+  subsets:["latin"]
+});
+
+const raleway=Raleway({
+  variable:"--font-Raleway",
+  subsets:["latin"]
+})
+
+const carlito=Carlito({
+  variable:"--font-Carlito",
+  subsets:["latin"],
+  weight: ["400", "700"],
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,12 +38,25 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${inter.variable} ${geistMono.variable} ${raleway.variable} ${carlito.variable} antialiased `} suppressHydrationWarning
       >
-        {children}
-      </body>
+       
+    
+      
+    <UserProvider>
+        <BackGround>  
+                       {children}
+                          <Toaster className="relative z-50" />
+                       
+        </BackGround>
+       
+
+    </UserProvider>
+    
+      
+    </body>
     </html>
   );
 }

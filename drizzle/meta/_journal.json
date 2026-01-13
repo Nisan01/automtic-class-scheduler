@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1763719162978,
+      "tag": "0000_medical_unicorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1763799512415,
+      "tag": "0001_blue_christian_walker",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1763799981834,
+      "tag": "0002_cloudy_justin_hammer",
+      "breakpoints": true
+    }
+  ]
+}
